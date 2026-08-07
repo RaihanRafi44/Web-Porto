@@ -7,7 +7,9 @@
     import ProjectCard from '$lib/components/projects/ProjectCard.svelte';
 
     // Ambil karya unggulan berdasarkan ID yang diatur di config
-    let featuredProjects = projects.filter(p => config.featuredProjectIds.includes(p.id));
+    let featuredProjects = config.featuredProjectIds
+        .map(id => projects.find(p => p.id === id))
+        .filter(Boolean);
 </script>
 
 <section id="karya">

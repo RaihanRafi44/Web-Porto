@@ -1,6 +1,6 @@
 export const config = {
     // Masukkan ID project yang ingin ditampilkan di halaman utama (Karya Unggulan)
-    featuredProjectIds: ['anicata', 'seller-tools-tisera']
+    featuredProjectIds: ['seller-tools-tisera', 'castfit']
 };
 
 export const projects = [
