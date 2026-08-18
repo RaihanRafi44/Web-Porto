@@ -28,20 +28,37 @@
             </ul>
         </div>
 
-        {#if project.playStoreUrl}
-            <div class="mb-10">
-                <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-                <a 
-                    href={project.playStoreUrl || '#'}
-                    target="_blank"
-                    rel="noopener noreferrer external"
-                    class="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-3 font-bold text-white shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-emerald-500/40"
-                >
-                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-                    </svg>
-                    <span>Get it on Google Play</span>
-                </a>
+        {#if project.playStoreUrl || project.appStoreUrl}
+            <div class="mb-10 flex flex-wrap gap-4">
+                {#if project.playStoreUrl}
+                    <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+                    <a 
+                        href={project.playStoreUrl || '#'}
+                        target="_blank"
+                        rel="noopener noreferrer external"
+                        class="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-3 font-bold text-white shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-emerald-500/40"
+                    >
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                        </svg>
+                        <span>Get it on Google Play</span>
+                    </a>
+                {/if}
+
+                {#if project.appStoreUrl}
+                    <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+                    <a 
+                        href={project.appStoreUrl || '#'}
+                        target="_blank"
+                        rel="noopener noreferrer external"
+                        class="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-slate-700 to-slate-800 border border-slate-600/50 px-6 py-3 font-bold text-white shadow-lg shadow-slate-900/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-slate-900/70"
+                    >
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.62-1.488 3.613-2.946 1.144-1.68 1.616-3.3 1.636-3.385-.038-.013-3.177-1.22-3.21-4.85-.026-3.04 2.483-4.516 2.597-4.58-1.425-2.083-3.626-2.365-4.417-2.44-2.04-.156-4.048 1.107-4.904 1.107zm3.83-4.606c.833-1.006 1.396-2.404 1.242-3.79-.142-.01-.197-.02-.295-.02-1.442 0-2.946.85-3.805 1.865-.74.87-1.395 2.298-1.218 3.665.176.014.288.02.406.02 1.238 0 2.65-.79 3.67-1.74z"/>
+                        </svg>
+                        <span>Download on the App Store</span>
+                    </a>
+                {/if}
             </div>
         {/if}
 

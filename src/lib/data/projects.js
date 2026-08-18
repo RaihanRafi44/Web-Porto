@@ -18,6 +18,7 @@ export const config = {
  * @property {string} [heroImage]
  * @property {string[]} images
  * @property {string} [playStoreUrl]
+ * @property {string} [appStoreUrl]
  */
 
 /** @type {Project[]} */
@@ -107,6 +108,7 @@ export const projects = [
         featured: true,
         needsDeviceFrame: true,
         playStoreUrl: 'https://play.google.com/store/apps/details?id=com.ts.smard_mobile',
+        appStoreUrl: 'https://apps.apple.com/id/app/smard-mobile/id6794172588',
         thumbnail: '/images/projects/smard-mobile/3_Home_Page_Student.webp',
         images: [
             '/images/projects/smard-mobile/1_Login_Menu_Using_Google.webp',
