@@ -3,6 +3,24 @@ export const config = {
     featuredProjectIds: ['seller-tools-tisera', 'castfit']
 };
 
+/**
+ * @typedef {Object} Project
+ * @property {string} id
+ * @property {string} nama
+ * @property {string} tipe
+ * @property {string} deskripsi
+ * @property {string[]} tech
+ * @property {string} [featuresTitle]
+ * @property {string[]} [fiturUtama]
+ * @property {boolean} [featured]
+ * @property {boolean} [needsDeviceFrame]
+ * @property {string} thumbnail
+ * @property {string} [heroImage]
+ * @property {string[]} images
+ * @property {string} [playStoreUrl]
+ */
+
+/** @type {Project[]} */
 export const projects = [
     {
         id: 'anicata',
@@ -88,9 +106,11 @@ export const projects = [
         ],
         featured: true,
         needsDeviceFrame: true,
+        playStoreUrl: 'https://play.google.com/store/apps/details?id=com.ts.smard_mobile',
         thumbnail: '/images/projects/smard-mobile/3_Home_Page_Student.webp',
         images: [
             '/images/projects/smard-mobile/1_Login_Menu_Using_Google.webp',
+            '/images/projects/smard-mobile/2_Role_Account_Handle.webp',
             '/images/projects/smard-mobile/3_Home_Page_Student.webp',
             '/images/projects/smard-mobile/4_Home_Page_Student\'s_Parent.webp',
             '/images/projects/smard-mobile/5_Schedule_Page.webp',
